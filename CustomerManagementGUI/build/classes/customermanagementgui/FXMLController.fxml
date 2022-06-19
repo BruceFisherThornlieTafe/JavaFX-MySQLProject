@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPaneCustomers" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customermanagementgui.FXMLController">
+   <children>
+      <Button fx:id="buttonCreateDataBase" layoutX="346.0" layoutY="23.0" mnemonicParsing="false" onAction="#createDatabase" text="Create DataBase - Tables - Records">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <tooltip>
+            <Tooltip text="Create New Database" />
+         </tooltip>
+      </Button>
+      <TextField fx:id="textFieldCustomerId" layoutX="459.0" layoutY="152.0" onKeyTyped="#validateCustomerIdTextFieldKeyTyped" onMouseClicked="#textFieldCustomerIdMouseClicked" prefHeight="39.0" prefWidth="84.0" style="-fx-background-color: white;">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Text layoutX="348.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="textFieldCustomerFullName" layoutX="459.0" layoutY="204.0" onKeyTyped="#validateCustomerFullNameTextFieldKeyTyped" onMouseClicked="#textFieldCustomerFullNameMouseClicked" prefHeight="39.0" prefWidth="313.0" style="-fx-background-color: white;">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Text layoutX="366.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="textFieldCustomerEmail" layoutX="459.0" layoutY="258.0" onKeyTyped="#validateCustomerEmailTextFieldKeyTyped" onMouseClicked="#textFieldCustomerEmailMouseClicked" prefHeight="39.0" prefWidth="409.0" style="-fx-background-color: white;">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Text layoutX="335.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="textFieldCustomerMobile" layoutX="459.0" layoutY="310.0" onKeyTyped="#validateCustomerMobileTextFieldKeyTyped" onMouseClicked="#textFieldCustomerMobileMouseClicked" prefHeight="39.0" prefWidth="143.0" style="-fx-background-color: white;">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Text layoutX="321.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile Number">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonAddCustomer" layoutX="84.0" layoutY="156.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="39.0" prefWidth="173.0" text="Add Customer">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <tooltip>
+            <Tooltip text="Add New Customer" />
+         </tooltip>
+      </Button>
+      <Button fx:id="buttonDeleteCustomer" layoutX="84.0" layoutY="232.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="39.0" prefWidth="173.0" text="Delete Customer">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <tooltip>
+            <Tooltip text="Delete Customer" />
+         </tooltip>
+      </Button>
+      <Button fx:id="buttonUpdateCustomer" layoutX="84.0" layoutY="309.0" mnemonicParsing="false" onAction="#updateCustomer" text="Update Customer">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <tooltip>
+            <Tooltip text="Update Customer" />
+         </tooltip>
+      </Button>
+      <TextField fx:id="textFieldSearchCustomerId" layoutX="457.0" layoutY="83.0" onKeyTyped="#validateSearchCustomerIdTextFieldKeyTyped" onMouseClicked="#textFieldSearchCustomerIdMouseClicked" prefHeight="39.0" prefWidth="84.0" style="-fx-background-color: white;">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Text layoutX="290.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Customer ID">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonSearchCustomerId" layoutX="616.0" layoutY="83.0" mnemonicParsing="false" onAction="#searchCustomerId" prefHeight="39.0" prefWidth="173.0" text="Search Customer">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <tooltip>
+            <Tooltip text="Search Customer ID" />
+         </tooltip>
+      </Button>
+      <TableView fx:id="tableViewCustomers" layoutX="26.0" layoutY="369.0" onMouseClicked="#tableViewCustomersMouseClicked" prefHeight="374.0" prefWidth="974.0">
+        <columns>
+          <TableColumn fx:id="tableViewCustomerID" prefWidth="93.0" text="ID" />
+          <TableColumn fx:id="tableViewCustomerFullName" minWidth="7.0" prefWidth="319.0" text="Full Name" />
+            <TableColumn fx:id="tableViewCustomerEmail" prefWidth="359.0" text="Email" />
+            <TableColumn fx:id="tableViewCustomerMobile" prefWidth="202.0" text="Mobile" />
+        </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SMT Business">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="searchCustomerIdErrorImage" fitHeight="33.0" fitWidth="33.0" layoutX="549.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Error.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="customerIdErrorImage" fitHeight="33.0" fitWidth="33.0" layoutX="550.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Error.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="customerFullNameErrorImage" fitHeight="33.0" fitWidth="33.0" layoutX="780.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Error.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="customerEmailErrorImage" fitHeight="33.0" fitWidth="33.0" layoutX="875.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Error.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="customerMobileErrorImage" fitHeight="33.0" fitWidth="33.0" layoutX="609.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Error.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelErrorMessage" alignment="CENTER" layoutX="25.0" layoutY="759.0" prefHeight="27.0" prefWidth="974.0" text="Error Message Label" textFill="#f80505">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="115.0" fitWidth="111.0" layoutX="888.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Deimos%20Coding%20Projects%20LOGO%20ROUND.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Button fx:id="buttonClearCustomerInput" layoutX="84.0" layoutY="83.0" mnemonicParsing="false" onAction="#clearCustomerTextFields" prefHeight="39.0" prefWidth="173.0" text="Clear Inputs">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <tooltip>
+            <Tooltip text="Clear Customer Inputs" />
+         </tooltip>
+      </Button>
+   </children>
+</AnchorPane>
